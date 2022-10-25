@@ -15,7 +15,14 @@ basic.forever(function () {
         basic.pause(200)
         pins.digitalWritePin(DigitalPin.P1, 0)
         basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P1, 1)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P1, 0)
+        basic.pause(200)
     }
+})
+basic.forever(function () {
+    basic.showString("roar dinosour")
 })
 basic.forever(function () {
     if (input.isGesture(Gesture.Shake)) {
@@ -27,7 +34,9 @@ basic.forever(function () {
 basic.forever(function () {
     if (input.lightLevel() < 200) {
         music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
+        basic.pause(5000)
     } else {
         music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once)
+        basic.pause(5000)
     }
 })
