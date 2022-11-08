@@ -1,6 +1,67 @@
-input.onButtonPressed(Button.A, function () {
-    music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.OnceInBackground)
-})
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . # # # .
+    . . # . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . # . .
+    . # # # .
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . # # # .
+    . . # . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . # # # .
+    . . # . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . # . .
+    . # # # .
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . # # # .
+    . . # . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.clearScreen()
 basic.forever(function () {
     if (input.buttonIsPressed(Button.B)) {
         pins.digitalWritePin(DigitalPin.P1, 1)
@@ -22,9 +83,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    basic.showString("roar dinosour")
-})
-basic.forever(function () {
     if (input.isGesture(Gesture.Shake)) {
         pins.servoWritePin(AnalogPin.P2, 180)
     } else {
@@ -34,9 +92,6 @@ basic.forever(function () {
 basic.forever(function () {
     if (input.lightLevel() < 200) {
         music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
-        basic.pause(5000)
-    } else {
-        music.startMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once)
         basic.pause(5000)
     }
 })
